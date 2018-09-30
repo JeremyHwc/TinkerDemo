@@ -15,6 +15,9 @@ public class TinkerManager {
     private static boolean isInstalled = false;
     private static ApplicationLike mAppLike;
 
+    /**
+     * 完成Tinker初始化
+     */
     public static void installTinker(ApplicationLike applicationLike) {
         mAppLike = applicationLike;
         if (isInstalled) {
@@ -24,6 +27,10 @@ public class TinkerManager {
         isInstalled = true;
     }
 
+    /**
+     * 加载补丁文件
+     * @param path 补丁文件路径
+     */
     public static void loadPatch(String path) {
         if (Tinker.isTinkerInstalled()) {
             TinkerInstaller.onReceiveUpgradePatch(getApplicationContext(),path);
@@ -31,7 +38,7 @@ public class TinkerManager {
     }
 
     /**
-     * tsgo ApplicationLike对象获取context
+     * 通过 ApplicationLike对象获取context
      * @return
      */
     private static Context getApplicationContext() {

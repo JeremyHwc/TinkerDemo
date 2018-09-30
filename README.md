@@ -46,4 +46,11 @@
     1.集成阶段
         gradle中添加Tinker依赖
         在代码中完成对Tinker的初始化
+    2.准备阶段
+        build一个old apk并安装到手机
+        修改一些功能后，build一个new apk
+    3.patch生成方式
+        使用命令行的方式完成patch包的生成
+        使用gradle插件的方式完成patch包的生成
+        
 ## Tinker源码讲解
